@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио IT Специалиста</title>
+    <style>
+        :root {
+            --bg: #f4f4f4;
+            --text: #1f2937;
+            --header-bg: #35424a;
+            --header-text: #ffffff;
+            --card-bg: #ffffff;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --muted: #93a3ad;
+        }
+
+        .dark-theme {
+            --bg: #0f172a;
+            --text: #e5e7eb;
+            --header-bg: #111827;
+            --header-text: #f9fafb;
+            --card-bg: #111827;
+            --accent: #22d3ee;
+            --accent-hover: #06b6d4;
+            --muted: #6b7280;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: var(--header-bg);
+            color: var(--header-text);
+            padding: 16px 20px;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        header h1 {
+            font-size: 1.25rem;
+            margin: 0;
+        }
+        nav a {
+            margin: 0 12px;
+            color: var(--header-text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .controls {
+            display: flex;
+            gap: 8px;
+        }
+        .btn {
+            appearance: none;
+            border: none;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .btn.secondary {
+            background: transparent;
+            border: 1px solid var(--muted);
+            color: var(--header-text);
+        }
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+        .btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        section {
+            padding: 20px;
+            background: var(--card-bg);
+            margin: 20px;
+            border-radius: 8px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .portfolio-item {
+            margin: 10px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        form {
+            display: grid;
+            gap: 12px;
+        }
+        input, textarea {
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: transparent;
+            color: inherit;
+        }
+        textarea { min-height: 120px; }
+        footer {
+            text-align: center;
+            padding: 12px 0;
+            background: var(--header-bg);
+            color: var(--header-text);
+        }
+    </style>
+    <meta name="description" content="Портфолио IT специалиста с поддержкой переключения языка (RU/EN).">
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <h1 data-i18n="headerTitle">Портфолио IT Специалиста</h1>
+        <nav>
+            <a href="#about" data-i18n="navAbout">Обо мне</a>
+            <a href="#projects" data-i18n="navProjects">Проекты</a>
+            <a href="#contact" data-i18n="navContact">Контакты</a>
+        </nav>
+        <div class="controls">
+            <button id="themeToggle" class="btn secondary" type="button" data-i18n="themeToggle">Тема</button>
+            <button id="langToggle" class="btn" type="button">EN</button>
+        </div>
+    </div>
+    
+
+</header>
+
+<section id="about">
+    <h2 data-i18n="aboutTitle">Обо мне</h2>
+    <p data-i18n="aboutText">Я IT специалист с опытом в создании современных и функциональных сайтов.</p>
+    
+</section>
+
+<section id="projects">
+    <h2 data-i18n="projectsTitle">Мои проекты</h2>
+    <div class="portfolio-item">
+        <h3 data-i18n="project1Title">Проект 1</h3>
+        <img src="https://via.placeholder.com/600x400" alt="Проект 1" data-i18n-attr="alt:project1Alt">
+        <p><span data-i18n="project1Desc">Описание проекта 1.</span> <a href="https://example.com" data-i18n="projectLink">Ссылка на проект</a></p>
+    </div>
+    <div class="portfolio-item">
+        <h3 data-i18n="project2Title">Проект 2</h3>
+        <img src="https://via.placeholder.com/600x400" alt="Проект 2" data-i18n-attr="alt:project2Alt">
+        <p><span data-i18n="project2Desc">Описание проекта 2.</span> <a href="https://example.com" data-i18n="projectLink">Ссылка на проект</a></p>
+    </div>
+    <div class="portfolio-item">
+        <h3 data-i18n="project3Title">Проект 3</h3>
+        <img src="https://via.placeholder.com/600x400" alt="Проект 3" data-i18n-attr="alt:project3Alt">
+        <p><span data-i18n="project3Desc">Описание проекта 3.</span> <a href="https://example.com" data-i18n="projectLink">Ссылка на проект</a></p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 data-i18n="contactTitle">Контакты</h2>
+    <p data-i18n="contactText">Свяжитесь со мной по электронной почте: info@example.com</p>
+    
+</section>
+
+<section id="feedback">
+    <h2 data-i18n="feedbackTitle">Обратная связь</h2>
+    <p data-i18n="feedbackSubtitle">Оставьте сообщение, и я свяжусь с вами.</p>
+    <form id="feedbackForm">
+        <input type="text" id="fbName" name="name" placeholder="Ваше имя" data-i18n-attr="placeholder:fbNamePh" required>
+        <input type="email" id="fbEmail" name="email" placeholder="Ваш email" data-i18n-attr="placeholder:fbEmailPh" required>
+        <textarea id="fbMessage" name="message" placeholder="Ваше сообщение" data-i18n-attr="placeholder:fbMessagePh" required></textarea>
+        <button type="submit" class="btn" data-i18n="feedbackSubmit">Отправить</button>
+        <small style="color: var(--muted);" data-i18n="feedbackNote">Нажатие Отправить откроет почтовый клиент для отправки письма.</small>
+    </form>
+</section>
+
+<footer>
+    <p data-i18n="footerText">© 2025 Портфолио IT Специалиста</p>
+    <noscript>JavaScript требуется для переключения языка и темы</noscript>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"IT Specialist","url":"https://example.com","sameAs":["https://github.com/example"],"jobTitle":"Software Engineer"}</script>
+</footer>
+
+<script>
+    (function() {
+        const translations = {
+            ru: {
+                title: 'Портфолио IT Специалиста',
+                headerTitle: 'Портфолио IT Специалиста',
+                navAbout: 'Обо мне',
+                navProjects: 'Проекты',
+                navContact: 'Контакты',
+                themeToggle: 'Тема',
+                aboutTitle: 'Обо мне',
+                aboutText: 'Я IT специалист с опытом в создании современных и функциональных сайтов.',
+                projectsTitle: 'Мои проекты',
+                project1Title: 'Проект 1',
+                project1Desc: 'Описание проекта 1.',
+                project1Alt: 'Проект 1',
+                project2Title: 'Проект 2',
+                project2Desc: 'Описание проекта 2.',
+                project2Alt: 'Проект 2',
+                project3Title: 'Проект 3',
+                project3Desc: 'Описание проекта 3.',
+                project3Alt: 'Проект 3',
+                projectLink: 'Ссылка на проект',
+                contactTitle: 'Контакты',
+                contactText: 'Свяжитесь со мной по электронной почте: info@example.com',
+                feedbackTitle: 'Обратная связь',
+                feedbackSubtitle: 'Оставьте сообщение, и я свяжусь с вами.',
+                fbNamePh: 'Ваше имя',
+                fbEmailPh: 'Ваш email',
+                fbMessagePh: 'Ваше сообщение',
+                feedbackSubmit: 'Отправить',
+                feedbackNote: 'Нажатие Отправить откроет почтовый клиент для отправки письма.',
+                footerText: '© 2025 Портфолио IT Специалиста'
+            },
+            en: {
+                title: 'IT Specialist Portfolio',
+                headerTitle: 'IT Specialist Portfolio',
+                navAbout: 'About',
+                navProjects: 'Projects',
+                navContact: 'Contact',
+                themeToggle: 'Theme',
+                aboutTitle: 'About Me',
+                aboutText: 'I am an IT specialist experienced in building modern, functional websites.',
+                projectsTitle: 'My Projects',
+                project1Title: 'Project 1',
+                project1Desc: 'Description of project 1.',
+                project1Alt: 'Project 1',
+                project2Title: 'Project 2',
+                project2Desc: 'Description of project 2.',
+                project2Alt: 'Project 2',
+                project3Title: 'Project 3',
+                project3Desc: 'Description of project 3.',
+                project3Alt: 'Project 3',
+                projectLink: 'Project link',
+                contactTitle: 'Contact',
+                contactText: 'Contact me by email: info@example.com',
+                feedbackTitle: 'Feedback',
+                feedbackSubtitle: 'Leave a message and I will get back to you.',
+                fbNamePh: 'Your name',
+                fbEmailPh: 'Your email',
+                fbMessagePh: 'Your message',
+                feedbackSubmit: 'Send',
+                feedbackNote: 'Pressing Send will open your email client to send the message.',
+                footerText: '© 2025 IT Specialist Portfolio'
+            }
+        };
+
+        let currentLang = 'ru';
+        const langToggleBtn = document.getElementById('langToggle');
+        const themeToggleBtn = document.getElementById('themeToggle');
+
+        function applyTranslations(lang) {
+            const dict = translations[lang];
+            if (!dict) return;
+            document.documentElement.setAttribute('lang', lang);
+            document.title = dict.title;
+            document.querySelectorAll('[data-i18n]').forEach(function(node){
+                const key = node.getAttribute('data-i18n');
+                if (dict[key] !== undefined) node.textContent = dict[key];
+            });
+            document.querySelectorAll('[data-i18n-attr]').forEach(function(node){
+                const parts = node.getAttribute('data-i18n-attr').split(':');
+                const attr = parts[0];
+                const key = parts[1];
+                if (dict[key] !== undefined) node.setAttribute(attr, dict[key]);
+            });
+            langToggleBtn.textContent = lang === 'ru' ? 'EN' : 'RU';
+        }
+
+        langToggleBtn.addEventListener('click', function(){
+            currentLang = currentLang === 'ru' ? 'en' : 'ru';
+            applyTranslations(currentLang);
+        });
+
+        themeToggleBtn.addEventListener('click', function(){
+            document.body.classList.toggle('dark-theme');
+        });
+
+        const feedbackForm = document.getElementById('feedbackForm');
+        feedbackForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            const name = document.getElementById('fbName').value.trim();
+            const email = document.getElementById('fbEmail').value.trim();
+            const message = document.getElementById('fbMessage').value.trim();
+
+            const subject = encodeURIComponent('Website Feedback');
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+            window.location.href = `mailto:a.myurshe@gmail.com?subject=${subject}&body=${body}`;
+        });
+
+        applyTranslations(currentLang);
+    })();
+</script>
+
+</body>
+</html>
+
